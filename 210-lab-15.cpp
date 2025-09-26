@@ -1,10 +1,11 @@
 #include <iostream>
+#include <iomanip>
 #include <array>
 #include <fstream>
 #include <string>
 using namespace std;
 
-const int SIZE = 4;
+const int SIZE = 4, W4 = 4;
 
 class Movie{
     public:
@@ -47,6 +48,15 @@ int main(){
         cout << "Error, file is not opening" << endl;
 
         return 1;
+    }
+
+    for (auto val : movies ) {
+        cout << "Movie: " << val.getTitle() << endl;
+        cout << setw(W4) << "Year released: " << val.getYear() << endl; 
+        cout << setw(W4) << "Screenwriter: " << val.getScreenWriter() << endl;
+        cout << endl;
+         
+
     }
 
 
