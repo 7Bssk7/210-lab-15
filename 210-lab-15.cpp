@@ -49,18 +49,14 @@ int main(){
 
         return 1;
     }
+    inputFile.close();
 
     for (auto val : movies ) {
         cout << "Movie: " << val.getTitle() << endl;
         cout << setw(W) << right << "Year released: " << val.getYear() << endl; 
         cout << setw(W1) << right << "Screenwriter: " << val.getScreenWriter() << endl;
         cout << endl;
-         
-
     }
-
-
-
 
     return 0;
 }
