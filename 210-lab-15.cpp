@@ -6,11 +6,11 @@ using namespace std;
 
 class Movie{
     public:
-        string getTitle() { return title; }
+        string getTitle() const { return title; }
         void setTitle(string t) { this->title = t; }
-        int getYear() { return year; }
+        int getYear() const { return year; }
         void setYear(int y) {this->year = y; } 
-        string getScreenWriter() { return screenWriter; }
+        string getScreenWriter() const { return screenWriter; }
         void setScreenWriter(string s) { this->screenWriter = s; }
 
     private:
