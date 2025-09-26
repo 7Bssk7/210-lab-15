@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-const int SIZE = 4, W4 = 4;
+const int SIZE = 4, W = 19, W1 = 18;
 
 class Movie{
     public:
@@ -52,8 +52,8 @@ int main(){
 
     for (auto val : movies ) {
         cout << "Movie: " << val.getTitle() << endl;
-        cout << setw(W4) << "Year released: " << val.getYear() << endl; 
-        cout << setw(W4) << "Screenwriter: " << val.getScreenWriter() << endl;
+        cout << setw(W) << right << "Year released: " << val.getYear() << endl; 
+        cout << setw(W1) << right << "Screenwriter: " << val.getScreenWriter() << endl;
         cout << endl;
          
 
