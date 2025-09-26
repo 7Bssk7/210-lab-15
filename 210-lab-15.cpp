@@ -4,6 +4,8 @@
 #include <string>
 using namespace std;
 
+const int SIZE = 4;
+
 class Movie{
     public:
         string getTitle() const { return title; }
@@ -22,6 +24,9 @@ class Movie{
 };
 
 int main(){
+    ifstream inputFile("input.txt");
+    array<Movie, SIZE> movies;
+
 
     return 0;
 }
