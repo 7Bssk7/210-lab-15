@@ -26,6 +26,30 @@ class Movie{
 int main(){
     ifstream inputFile("input.txt");
     array<Movie, SIZE> movies;
+    string t,s;
+    int y, i = 0;
+
+    if(inputFile.is_open()){
+        while(getline(inputFile, s)){
+            inputFile >> y;
+            inputFile.ignore();
+            getline(inputFile, t);
+            Movie tmp;
+            tmp.setTitle(t);
+            tmp.setYear(y);
+            tmp.setScreenWriter(s);
+            movies[i] = tmp;
+            i++;
+        }
+
+    }
+    else{
+        cout << "Error, file is not opening" << endl;
+
+        return 1;
+    }
+
+
 
 
     return 0;
