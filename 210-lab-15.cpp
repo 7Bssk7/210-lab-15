@@ -15,6 +15,12 @@ class Movie{
         void setYear(int y) {this->year = y; } 
         string getScreenWriter() const { return screenWriter; }
         void setScreenWriter(string s) { this->screenWriter = s; }
+        void print() const{  
+            cout << "Movie: " << title << endl;
+            cout << setw(W) << right << "Year released: " << year << endl; 
+            cout << setw(W1) << right << "Screenwriter: " << screenWriter << endl;
+            cout << endl;
+        }
 
     private:
         string title;
@@ -52,10 +58,7 @@ int main(){
     inputFile.close();
 
     for (auto val : movies ) {
-        cout << "Movie: " << val.getTitle() << endl;
-        cout << setw(W) << right << "Year released: " << val.getYear() << endl; 
-        cout << setw(W1) << right << "Screenwriter: " << val.getScreenWriter() << endl;
-        cout << endl;
+        val.print();
     }
 
     return 0;
